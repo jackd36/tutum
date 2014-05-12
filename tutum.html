@@ -6,32 +6,76 @@
 <link rel="stylesheet" type="text/css" href="css/style.css" />
 <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 </head>
-<div>
-	<img src="css/tutum_mail.png">
-</div>
+
+
 	<body>
 	<div class="container">
-	<form id="slick-login">
-		<img class="cloud" src="css/cropped-cloud.png" align="middle">
-	<label for="username">username</label><input type="text" name="username" class="placeholder" placeholder="Username">
+		<form id="slick-login">
+			<img class="cloud" src="css/cropped-cloud.png" align="middle">
+			<input type="text" name="username" class="form-control" placeholder="Username">
+			<input type="text" name="imagename" class="form-control" placeholder="Image Name">
+			<input type="text" name="TarURL" class="form-control" placeholder="Tar URL">
+			<input type="password" name="password" class="form-control" placeholder="Password">
 
-	<label for="imagename">imagename</label><input type="text" name="imagename" class="placeholder" placeholder="Image Name">
+					<!-- Nav tabs -->
+		<ul class="nav nav-tabs nav-pills" id="tabcontrol">
+		  <li class="active"><a href="#dockerfile" data-toggle="tab">Dockerfile</a></li>
+		  <li><a href="#github" data-toggle="tab">Github</a></li>
+		  <li><a href="#tarurl" data-toggle="tab">Tar Url</a></li>
+		</ul>
+
+		<!-- Tab panes -->
+		<div class="tab-content">
+		  <div class="tab-pane active" id="dockerfile">
+				<textarea type="text" name="textarea" class="form-control" placeholder="Dockerfile" wrap="off"></textarea>
+				<button class="btn btn-primary btn-large">Submit</button>
+
+		  </div>
+		  <div class="tab-pane" id="github">
+		  	<input type="text" name="GHUsername" class="form-control" placeholder="Github Username">
+			<input type="text" name="GHRepoName" class="form-control" placeholder="Github Repository Name">
+			<input type="text" name="GHTagName" class="form-control" placeholder="Github Tag Name">
+		  	<button class="btn btn-primary btn-large">Submit</button>
+		  </div>
+		  <div class="tab-pane" id="tarurl">
+		  	<input type="text" name="Tarurl" class="form-control" placeholder="Tar Url">
+		  	<button class="btn btn-primary btn-large">Submit</button>
+		  </div>
+		</div>
 
 
-	<label for="TarURL">Tar URL</label><input type="text" name="TarURL" class="placeholder" placeholder="Tar URL">
-
-</body>
+		</form>
 
 	
-   
 
 
-	<label for="password">password</label><input type="password" name="password" class="placeholder" placeholder="Password">
+	    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	    <!-- Include all compiled plugins (below), or include individual files as needed -->
+	    <script src="js/bootstrap.min.js"></script>
 
-<button class="btn btn-primary btn-large">Submit</button>
-<div class="text1">
-<label for="Dockerfile">Dockerfile</label><textarea type="text" name="textarea" class="placeholder" placeholder="Dockerfile" wrap="off"></textarea>
-</div>
-</form>
-</body>
+
+	    <script>
+		$('#dockerfile').click(function (e) {
+		  e.preventDefault()
+		  $(this).tab('show')
+		})
+
+		$('#github').click(function (e) {
+		  e.preventDefault()
+		  $(this).tab('show')
+		})
+
+		$('#tarurl').click(function (e) {
+		  e.preventDefault()
+		  $(this).tab('show')
+		})
+		</script>
+
+	</body>
+
+
+
 </html>
+
+
