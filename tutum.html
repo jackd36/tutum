@@ -12,9 +12,8 @@
 	<div class="container">
 		<form id="slick-login">
 			<img class="cloud" src="css/cropped-cloud.png" align="middle">
-			<input type="text" name="username" class="form-control" placeholder="Username">
+			<input type="text" name="username" class="form-control" placeholder="Image Repository Username">
 			<input type="text" name="imagename" class="form-control" placeholder="Image Name">
-			<input type="text" name="TarURL" class="form-control" placeholder="Tar URL">
 			<input type="password" name="password" class="form-control" placeholder="Password">
 
 					<!-- Nav tabs -->
@@ -28,18 +27,18 @@
 		<div class="tab-content">
 		  <div class="tab-pane active" id="dockerfile">
 				<textarea type="text" name="textarea" class="form-control" placeholder="Dockerfile" wrap="off"></textarea>
-				<button class="btn btn-primary btn-large">Submit</button>
+				<button class="btn btn-primary btn-large" id="dockerfileButton">Submit</button>
 
 		  </div>
 		  <div class="tab-pane" id="github">
 		  	<input type="text" name="GHUsername" class="form-control" placeholder="Github Username">
 			<input type="text" name="GHRepoName" class="form-control" placeholder="Github Repository Name">
 			<input type="text" name="GHTagName" class="form-control" placeholder="Github Tag Name">
-		  	<button class="btn btn-primary btn-large">Submit</button>
+		  	<button class="btn btn-primary btn-large" id="githubButton">Submit</button>
 		  </div>
 		  <div class="tab-pane" id="tarurl">
 		  	<input type="text" name="Tarurl" class="form-control" placeholder="Tar Url">
-		  	<button class="btn btn-primary btn-large">Submit</button>
+		  	<button class="btn btn-primary btn-large" id="tarurlButton">Submit</button>
 		  </div>
 		</div>
 
@@ -61,15 +60,35 @@
 		  $(this).tab('show')
 		})
 
+		$('#dockerfileButton').click(function (e) {
+		  e.preventDefault()
+		  $(this).tab('show')
+		})
+
 		$('#github').click(function (e) {
 		  e.preventDefault()
 		  $(this).tab('show')
 		})
 
+		$('#githubButton').click(function (e) {
+		  e.preventDefault()
+		  $(this).tab('show')
+		})
+
+
 		$('#tarurl').click(function (e) {
 		  e.preventDefault()
 		  $(this).tab('show')
 		})
+
+		$('#githubButton').click(function (e) {
+		  e.preventDefault()
+		  $(this).tab('show')
+		})
+
+
+
+
 		</script>
 
 	</body>
