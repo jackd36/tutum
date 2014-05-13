@@ -54,6 +54,11 @@ table {
 	width:200px;
 	padding-top: 10px;
 }
+#progress{
+	padding-top: 20%;
+	padding-left: 35%;
+}
+
 
 body {
 font-family: 'Open Sans', sans-serif;
